@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Layouts7MA</string>
+    <string name="primeiro">Primeiro</string>
+    <string name="segundo">Segundo botão</string>
+    <string name="terceiro">Terceiro botão</string>
+    <string name="quarto">Quarto botão</string>
+    <string name="margin">Margin</string>
+    <string name="padding">Padding</string>
+</resources>
