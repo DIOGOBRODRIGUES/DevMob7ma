@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        buttonPacel.setOnClickListener{
+        buttonParcel.setOnClickListener{
             val intent = Intent(this, Tela2Activity::class.java)
             intent.putExtra("cliente",Cliente(20, "Fabiano Silva"))
             startActivity(intent)
