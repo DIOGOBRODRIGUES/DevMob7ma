@@ -19,10 +19,10 @@ class HotelDetailFragment: Fragment(),  HotelDetailsView{
         return inflater.inflate(R.layout.fragment_hotel_details, container, false)
     }
 
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter.loadHotelDetails(arguments?.getLong(EXTRA_HOTEL_ID,-1)?:-10)
-    }*/
+    }
 
     override fun showHotelDetails(hotel: Hotel) {
         this.hotel = hotel
@@ -35,6 +35,17 @@ class HotelDetailFragment: Fragment(),  HotelDetailsView{
         txtName.text= getString(R.string.error_hotel_not_found)
         txtAddress.visibility = View.GONE
         rtbRating.visibility = View.GONE
+    }
+
+    companion object {
+        const val TAG_DETAILS = "tagDetails"
+        private const val EXTRA_HOTEL_ID = "hotelID"
+
+        fun newInstance(id:Long) = HotelDetailFragment().apply{
+            arguments = Bundle().apply{
+                putLong(EXTRA_HOTEL_ID, id)
+            }
+        }
     }
 
 }
