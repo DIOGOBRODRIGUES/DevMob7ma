@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Nome do Hotel"></TextView>
+        tools:text="Nome do Hotel" />
 
     <TextView
         android:id="@+id/txtAddress"
@@ -26,22 +25,19 @@
         app:layout_constraintBottom_toTopOf="@+id/rtbRating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtName"
-        tools:text="Endereço"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        tools:text="Endereço" />
 
     <RatingBar
         android:id="@+id/rtbRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:progressTint="@color/purple_200"
         android:isIndicator="true"
-        android:numStart="5"
+        android:numStars="5"
+        android:progressTint="@color/colorAccent"
         android:stepSize="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtAddress"></RatingBar>
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
 </androidx.constraintlayout.widget.ConstraintLayout>
